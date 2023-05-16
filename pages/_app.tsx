@@ -11,7 +11,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           name="description"
           content="NextTravel Company offers unforgettable journeys to the best tourist destinations. Join us to experience world adventures!"
         />
-        <link rel="icon" href="/public/favicon.ico" />
+        <link rel="icon" href="../public/favicon.ico" />
       </Head>
       <Component {...pageProps} />
     </>
