@@ -1,6 +1,6 @@
-import Header from './components/header'
+import Header from '@/components/header'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Header />
@@ -10,3 +10,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home
