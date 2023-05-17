@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="flex items-center py-10">
+    <section id="about" className="flex items-center bg-red-50">
       <div className="w-1/2">
         <Image
           src="/images/about.jpg"
@@ -19,6 +19,9 @@ const AboutSection: React.FC = () => {
           туристичних напрямків. Долучайтеся до нас, щоб пережити світові
           пригоди!
         </p>
+        <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none transition duration-300 ">
+          Залишити заявку
+        </button>
       </div>
     </section>
   );
