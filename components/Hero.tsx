@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Hero: React.FC = () => {
   return (
@@ -13,11 +13,11 @@ const Hero: React.FC = () => {
         маршрути, які дозволять вам побачити світ у всій його красі та відкрити
         нові горизонти. Приєднуйтесь до нас і створюйте незабутні спогади!
       </p>
-      <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+      <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none transition duration-300 ">
         Залишити заявку
       </button>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

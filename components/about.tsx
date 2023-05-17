@@ -1,15 +1,27 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 
-const About: React.FC = () => {
+const AboutSection: React.FC = () => {
   return (
-    <section className="h-screen flex flex-col justify-center items-center bg-gray-300">
-      <h2 className="text-4xl font-bold mb-4">Title</h2>
-      <p className="text-xl text-center">Subtitle</p>
-      <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
-        Залишити заявку
-      </button>
+    <section id="about" className="flex items-center py-10">
+      <div className="w-1/2">
+        <Image
+          src="/images/about.jpg"
+          alt="Passports"
+          width={650}
+          height={500}
+        />
+      </div>
+      <div className="w-1/2 px-8">
+        <h2 className="text-2xl font-bold mb-4">Про нас</h2>
+        <p className="text-lg">
+          Ми - компанія, яка пропонує незабутні подорожі до найкращих
+          туристичних напрямків. Долучайтеся до нас, щоб пережити світові
+          пригоди!
+        </p>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default AboutSection;
