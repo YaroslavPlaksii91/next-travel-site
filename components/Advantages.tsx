@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Advantages: React.FC = () => {
   return (
-    <section id="about" className="flex items-center bg-red-50">
+    <section id="advantages" className="flex items-center bg-red-50">
       <div className="w-1/2 px-8">
         <h2 className="text-2xl font-bold mb-4">Наші переваги:</h2>
         <ul className="list-disc pl-4 mb-4 text-lg">
@@ -35,8 +35,8 @@ const Advantages: React.FC = () => {
         <Image
           src="/images/advantages.jpg"
           alt="Map of the world"
-          width={650}
-          height={500}
+          width={800}
+          height={600}
         />
       </div>
     </section>

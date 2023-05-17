@@ -33,10 +33,10 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
       </h2>
       <div
         id="gallery"
-        className="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
+        className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
       >
-        {images.map((imageUrl, index) => (
-          <div key={index} className="h-80 overflow-hidden rounded">
+        {images.map((imageUrl) => (
+          <div key={imageUrl} className="h-80 overflow-hidden rounded">
             <a
               href={imageUrl}
               target="_blank"

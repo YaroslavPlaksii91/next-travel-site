@@ -8,8 +8,8 @@ const AboutSection: React.FC = () => {
         <Image
           src="/images/about.jpg"
           alt="Passports"
-          width={650}
-          height={500}
+          width={800}
+          height={600}
         />
       </div>
       <div className="w-1/2 px-8">
