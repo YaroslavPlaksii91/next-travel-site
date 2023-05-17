@@ -3,11 +3,11 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import Image from 'next/image';
 
-type GallerySectionProps = {
+type GalleryProps = {
   images: string[];
 };
 
-const GallerySection: React.FC<GallerySectionProps> = ({ images }) => {
+const Gallery: React.FC<GalleryProps> = ({ images }) => {
   useEffect(() => {
     const galleryElement = document.getElementById('gallery');
 
@@ -54,4 +54,4 @@ const GallerySection: React.FC<GallerySectionProps> = ({ images }) => {
   );
 };
 
-export default GallerySection;
+export default Gallery;

@@ -1,7 +1,8 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import GallerySection from '@/components/Gallery';
+import Gallery from '@/components/Gallery';
+import Advantages from '@/components/Advantages';
 
 const images = [
   '/images/gallery-1.jpg',
@@ -21,7 +22,8 @@ const Home = () => {
       <main>
         <Hero />
         <About />
-        <GallerySection images={images} />
+        <Gallery images={images} />
+        <Advantages />
       </main>
     </>
   );
