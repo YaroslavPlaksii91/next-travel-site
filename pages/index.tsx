@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Gallery from '@/components/Gallery';
 import Advantages from '@/components/Advantages';
+import Footer from '@/components/Footer';
 
 const images = [
   '/images/gallery-1.jpg',
@@ -25,6 +26,7 @@ const Home = () => {
         <Gallery images={images} />
         <Advantages />
       </main>
+      <Footer />
     </>
   );
 };
