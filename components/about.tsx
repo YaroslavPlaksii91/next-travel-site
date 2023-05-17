@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Button from './Button';
 
 const AboutSection: React.FC = () => {
   return (
@@ -19,9 +20,7 @@ const AboutSection: React.FC = () => {
           туристичних напрямків. Долучайтеся до нас, щоб пережити світові
           пригоди!
         </p>
-        <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none transition duration-300 ">
-          Залишити заявку
-        </button>
+        <Button>Залишити заявку</Button>
       </div>
     </section>
   );

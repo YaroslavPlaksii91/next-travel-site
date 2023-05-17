@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Button from './Button';
 
 const Advantages: React.FC = () => {
   return (
@@ -27,9 +28,7 @@ const Advantages: React.FC = () => {
           Оберіть нас для вашої наступної пригоди, і ми гарантуємо, що ви
           отримаєте незабутні враження та велике задоволення від подорожі!
         </p>
-        <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none transition duration-250 ">
-          Залишити заявку
-        </button>
+        <Button>Залишити заявку</Button>
       </div>
       <div className="w-1/2">
         <Image

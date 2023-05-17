@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 const Hero: React.FC = () => {
   return (
@@ -13,9 +14,7 @@ const Hero: React.FC = () => {
         які дозволять вам побачити світ у всій його красі та відкрити нові
         горизонти. Приєднуйтесь до нас і створюйте незабутні спогади!
       </p>
-      <button className="mt-6 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none transition duration-250 z-10">
-        Залишити заявку
-      </button>
+      <Button>Залишити заявку</Button>
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
     </section>
   );
