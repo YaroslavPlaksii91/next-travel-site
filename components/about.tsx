@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Container from './Container';
 import Button from './Button';
 
-const AboutSection: React.FC = () => {
+const About: React.FC = () => {
   return (
     <section id="about" className="bg-red-50">
       <Container>
@@ -31,4 +31,4 @@ const AboutSection: React.FC = () => {
   );
 };
 
-export default AboutSection;
+export default About;
