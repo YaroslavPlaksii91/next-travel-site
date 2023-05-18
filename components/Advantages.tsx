@@ -7,8 +7,8 @@ const Advantages: React.FC = () => {
   return (
     <section id="advantages" className="bg-red-50">
       <Container>
-        <div className="flex">
-          <div className="w-1/2 px-10 py-8">
+        <div className="flex flex-col-reverse md:flex-row">
+          <div className="w-full md:w-1/2 px-10 py-8">
             <h2 className="text-2xl text-center font-bold mb-4">
               Наші переваги:
             </h2>
@@ -35,7 +35,7 @@ const Advantages: React.FC = () => {
             </p>
             <Button>Залишити заявку</Button>
           </div>
-          <div className="w-1/2 relative">
+          <div className="relative w-full h-[460px] md:h-[540px] md:w-1/2">
             <Image
               src="/images/advantages.jpg"
               alt="Map of the world"

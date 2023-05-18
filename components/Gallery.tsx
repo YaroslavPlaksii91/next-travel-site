@@ -31,17 +31,22 @@ const Gallery: React.FC<{ images: Gallery }> = ({ images }) => {
   }, []);
 
   return (
-    <section className="py-10 bg-blue-50">
+    <section className="py-10 px-1 bg-blue-50">
       <Container>
         <h2 className="text-2xl text-center font-bold mb-4">
           Мандрівки, що запам'ятаються!
         </h2>
         <div
           id="gallery"
-          className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
+          className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
         >
-          {images.map(({ href, id }) => (
-            <div key={id} className="h-80 overflow-hidden rounded">
+          {images.map(({ href, id }, index) => (
+            <div
+              key={id}
+              className={`h-80 overflow-hidden rounded ${
+                index === images.length - 1 ? 'hidden xl:block' : ''
+              }`}
+            >
               <a
                 href={href}
                 target="_blank"

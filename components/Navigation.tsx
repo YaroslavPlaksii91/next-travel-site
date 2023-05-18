@@ -4,15 +4,15 @@ import { Link as ScrollLink } from 'react-scroll';
 
 const Nav: React.FC = () => {
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex flex-col justify-between items-center md:flex-row ">
       <Link
         href="/"
-        className="font-bold -skew-y-6 -skew-x-6 hover:-skew-y-0 hover:-skew-x-0 hover:outline-none focus:-skew-y-0 focus:-skew-x-0 focus:outline-none transition-transform duration-250"
+        className="mb-4 md:mb-0 font-bold text-2xl -skew-y-6 -skew-x-6 hover:-skew-y-0 hover:-skew-x-0 hover:outline-none focus:-skew-y-0 focus:-skew-x-0 focus:outline-none transition-transform duration-250"
       >
-        <span className="text-blue-500 text-xl">Next</span>
-        <span className="text-yellow-400 text-xl">Travel</span>
+        <span className="text-blue-500">Next</span>
+        <span className="text-yellow-400">Travel</span>
       </Link>
-      <ul className="flex space-x-8">
+      <ul className="flex text-sm md:text-base space-x-3 md:space-x-8">
         <li>
           <ScrollLink
             tabIndex={1}
@@ -33,7 +33,7 @@ const Nav: React.FC = () => {
             smooth={true}
             spy={true}
             duration={500}
-            offset={-130}
+            offset={-150}
             className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
           >
             Галерея
@@ -46,6 +46,7 @@ const Nav: React.FC = () => {
             smooth={true}
             spy={true}
             duration={500}
+            offset={-50}
             className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
           >
             Наші переваги
