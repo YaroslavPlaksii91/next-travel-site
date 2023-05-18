@@ -17,3 +17,11 @@ const Main: React.FC = () => {
 };
 
 export default Main;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      images,
+    },
+  };
+}
