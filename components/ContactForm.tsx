@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
+import toast from 'react-hot-toast';
+
 type FormData = {
   name: string;
   phone: string;
@@ -18,6 +20,7 @@ const ContactForm: React.FC = () => {
 
   const onSubmit = (data: FormData) => {
     console.log(data);
+    toast.success('Відправлено!');
     reset();
   };
 
