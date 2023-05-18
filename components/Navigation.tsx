@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
+import Logo from './Logo';
 
 const Nav: React.FC = () => {
   const router = useRouter();
@@ -9,13 +10,7 @@ const Nav: React.FC = () => {
 
   return (
     <nav className="flex flex-col justify-between items-center md:flex-row ">
-      <Link
-        href="/"
-        className="mb-4 md:mb-0 font-bold text-2xl -skew-y-6 -skew-x-6 hover:-skew-y-0 hover:-skew-x-0 hover:outline-none focus:-skew-y-0 focus:-skew-x-0 focus:outline-none transition-transform duration-250"
-      >
-        <span className="text-blue-500">Next</span>
-        <span className="text-yellow-400">Travel</span>
-      </Link>
+      <Logo />
       <ul className="flex text-sm md:text-base space-x-3 md:space-x-8">
         <li>
           {isSmoothScrollEnabled ? (
