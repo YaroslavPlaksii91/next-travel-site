@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import Image from 'next/image';
+import Container from './Container';
 
 type GalleryProps = {
   images: string[];
@@ -28,28 +29,30 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
 
   return (
     <section className="py-10 bg-blue-50">
-      <h2 className="text-2xl text-center font-bold mb-4">
-        Мандрівки, що запам'ятаються!
-      </h2>
-      <div
-        id="gallery"
-        className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
-      >
-        {images.map((imageUrl) => (
-          <div key={imageUrl} className="h-80 overflow-hidden rounded">
-            <a
-              href={imageUrl}
-              target="_blank"
-              rel="noreferrer"
-              data-pswp-width={800}
-              data-pswp-height={500}
-              className="relative block w-full h-full hover:opacity-80 focus:opacity-80 transition-opacity duration-250"
-            >
-              <Image src={imageUrl} alt="Nature" fill />
-            </a>
-          </div>
-        ))}
-      </div>
+      <Container>
+        <h2 className="text-2xl text-center font-bold mb-4">
+          Мандрівки, що запам'ятаються!
+        </h2>
+        <div
+          id="gallery"
+          className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
+        >
+          {images.map((imageUrl) => (
+            <div key={imageUrl} className="h-80 overflow-hidden rounded">
+              <a
+                href={imageUrl}
+                target="_blank"
+                rel="noreferrer"
+                data-pswp-width={800}
+                data-pswp-height={500}
+                className="relative block w-full h-full hover:opacity-80 focus:opacity-80 transition-opacity duration-250"
+              >
+                <Image src={imageUrl} alt="Nature" fill />
+              </a>
+            </div>
+          ))}
+        </div>
+      </Container>
     </section>
   );
 };

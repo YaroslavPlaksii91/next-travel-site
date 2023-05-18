@@ -1,11 +1,14 @@
 import React from 'react';
+import Container from './Container';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white text-center p-8">
-      <p>
-        © 2023 Designed and produced by Yaroslav Plaksii. All rights reserved.
-      </p>
+      <Container>
+        <p>
+          © 2023 Designed and produced by Yaroslav Plaksii. All rights reserved.
+        </p>
+      </Container>
     </footer>
   );
 };

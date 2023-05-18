@@ -20,7 +20,7 @@ const Nav: React.FC = () => {
             smooth={true}
             spy={true}
             duration={500}
-            offset={100}
+            offset={-50}
             className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
           >
             Про нас
