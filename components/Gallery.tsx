@@ -16,7 +16,7 @@ const Gallery: React.FC<{ images: Gallery }> = ({ images }) => {
     const galleryElement = document.getElementById('gallery');
 
     if (galleryElement) {
-      let lightbox = new PhotoSwipeLightbox({
+      const lightbox = new PhotoSwipeLightbox({
         gallery: '#gallery',
         children: 'a',
         pswpModule: () => import('photoswipe'),
@@ -25,7 +25,6 @@ const Gallery: React.FC<{ images: Gallery }> = ({ images }) => {
 
       return () => {
         lightbox.destroy();
-        lightbox = null;
       };
     }
   }, []);
