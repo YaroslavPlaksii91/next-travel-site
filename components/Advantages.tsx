@@ -9,7 +9,9 @@ const Advantages: React.FC = () => {
       <Container>
         <div className="flex">
           <div className="w-1/2 px-10 py-8">
-            <h2 className="text-2xl font-bold mb-4">Наші переваги:</h2>
+            <h2 className="text-2xl text-center font-bold mb-4">
+              Наші переваги:
+            </h2>
             <ul className="list-disc pl-4 mb-4 text-lg marker:text-sky-500 space-y-2">
               <li>
                 <p>Досвід у галузі</p>

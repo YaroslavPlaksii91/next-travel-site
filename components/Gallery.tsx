@@ -4,11 +4,14 @@ import 'photoswipe/style.css';
 import Image from 'next/image';
 import Container from './Container';
 
-type GalleryProps = {
-  images: string[];
+type GalleryItem = {
+  id: number;
+  href: string;
 };
 
-const Gallery: React.FC<GalleryProps> = ({ images }) => {
+type Gallery = GalleryItem[];
+
+const Gallery: React.FC<{ images: Gallery }> = ({ images }) => {
   useEffect(() => {
     const galleryElement = document.getElementById('gallery');
 
@@ -37,17 +40,17 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
           id="gallery"
           className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
         >
-          {images.map((imageUrl) => (
-            <div key={imageUrl} className="h-80 overflow-hidden rounded">
+          {images.map(({ href, id }) => (
+            <div key={id} className="h-80 overflow-hidden rounded">
               <a
-                href={imageUrl}
+                href={href}
                 target="_blank"
                 rel="noreferrer"
                 data-pswp-width={800}
                 data-pswp-height={500}
                 className="relative block w-full h-full hover:opacity-80 focus:opacity-80 transition-opacity duration-250"
               >
-                <Image src={imageUrl} alt="Nature" fill />
+                <Image src={href} alt="Nature" fill />
               </a>
             </div>
           ))}
