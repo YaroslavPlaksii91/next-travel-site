@@ -16,6 +16,7 @@ const Nav: React.FC = () => {
           {isSmoothScrollEnabled ? (
             <ScrollLink
               tabIndex={1}
+              href="about"
               to="about"
               smooth={true}
               spy={true}
@@ -39,6 +40,7 @@ const Nav: React.FC = () => {
           {isSmoothScrollEnabled ? (
             <ScrollLink
               tabIndex={1}
+              href="gallery"
               to="gallery"
               smooth={true}
               spy={true}
@@ -62,6 +64,7 @@ const Nav: React.FC = () => {
           {isSmoothScrollEnabled ? (
             <ScrollLink
               tabIndex={1}
+              href="advantages"
               to="advantages"
               smooth={true}
               spy={true}
