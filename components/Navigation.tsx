@@ -27,6 +27,7 @@ const Nav: React.FC = () => {
             </ScrollLink>
           ) : (
             <Link
+              tabIndex={1}
               href="/#about"
               className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
             >
@@ -49,6 +50,7 @@ const Nav: React.FC = () => {
             </ScrollLink>
           ) : (
             <Link
+              tabIndex={1}
               href="/#gallery"
               className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
             >
@@ -71,6 +73,7 @@ const Nav: React.FC = () => {
             </ScrollLink>
           ) : (
             <Link
+              tabIndex={1}
               href="/#advantages"
               className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
             >
