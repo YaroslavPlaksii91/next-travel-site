@@ -1,8 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ErrorPage: React.FC = () => {
   return (
-    <div className="h-screen flex flex-col justify-center bg-gray-300 bg-[url('/images/hero-image.jpg')] bg-cover bg-center">
+    <div className="relative h-screen flex flex-col justify-center bg-gray-300">
+      <Image
+        src="/images/hero-image.jpg"
+        alt="View of the sea"
+        fill
+        className="h-full object-cover object-center z-0"
+      />
       <h1 className="relative text-center text-9xl font-bold text-white z-10">
         404
       </h1>

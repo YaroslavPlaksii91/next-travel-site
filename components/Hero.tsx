@@ -1,10 +1,17 @@
 import React from 'react';
+import Image from 'next/image';
 import Container from './Container';
 import Button from './Button';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen px-4 py-32 md:py-24 flex flex-col justify-center items-center bg-gray-300 bg-[url('/images/hero-image.jpg')] bg-cover bg-center md:px-28">
+    <section className="relative min-h-screen px-4 py-32 md:py-24 flex justify-center items-center bg-gray-300 md:px-28">
+      <Image
+        src="/images/hero-image.jpg"
+        alt="View of the sea"
+        fill
+        className="h-full object-cover object-center z-0"
+      />
       <Container>
         <h1 className="relative text-center font-bold mb-5 text-white z-10 text-3xl md:text-6xl ">
           Відкрийте світ подорожей з <span className="text-blue-500">Next</span>
