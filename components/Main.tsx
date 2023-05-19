@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from './Hero';
-import About from './About';
+import About from '@/components/About';
 import Gallery from './Gallery';
 import Advantages from './Advantages';
 import images from '../services/images.json';
