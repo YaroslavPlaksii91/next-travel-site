@@ -23,6 +23,14 @@ const ContactForm: React.FC = () => {
     reset();
   };
 
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const target = e.target as HTMLInputElement;
+      target.checked = !target.checked;
+    }
+  };
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -107,13 +115,16 @@ const ContactForm: React.FC = () => {
         <label className="flex items-center text-white">
           <input
             type="checkbox"
-            className={`mr-2 cursor-pointer focus:outline-none`}
+            className={`mr-2 cursor-pointer focus:outline-none peer`}
             {...register('checkbox', { required: "Це поле є обов'язковим" })}
+            onKeyDown={onKeyDown}
           />
           {errors.checkbox ? (
             <p className="text-red-500">{errors.checkbox.message}</p>
           ) : (
-            'Погоджуюсь на обробку персональних даних'
+            <p className={`peer-focus:text-blue-500`}>
+              Погоджуюсь на обробку персональних даних
+            </p>
           )}
         </label>
       </div>
