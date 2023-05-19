@@ -107,7 +107,7 @@ const ContactForm: React.FC = () => {
         <label className="flex items-center text-white">
           <input
             type="checkbox"
-            className={`mr-2 cursor-pointer`}
+            className={`mr-2 cursor-pointer focus:outline-none`}
             {...register('checkbox', { required: "Це поле є обов'язковим" })}
           />
           {errors.checkbox ? (
@@ -119,7 +119,7 @@ const ContactForm: React.FC = () => {
       </div>
       <button
         type="submit"
-        className="block mx-auto bg-blue-500 text-white px-4 py-2 rounded hover{...errors.checkbox ? 'bg-blue-600' : 'bg-blue-500'}"
+        className="block mx-auto bg-blue-500 text-white font-medium hover:bg-white focus:bg-white hover:text-blue-500 focus:text-blue-500 focus:outline-none transition-colors duration-300 px-4 py-2 rounded hover{...errors.checkbox ? 'bg-blue-600' : 'bg-blue-500'}"
       >
         Відправити
       </button>

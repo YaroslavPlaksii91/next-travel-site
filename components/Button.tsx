@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ children }) => {
     >
       <button
         tabIndex={-1}
-        className="relative bg-blue-500 font-medium text-white py-2 px-4 rounded group-hover:bg-white group-hover:text-blue-500 group-focus:bg-white group-focus:text-blue-500 transition duration-250 z-10"
+        className="relative bg-blue-500 font-medium text-white py-2 px-4 rounded group-hover:bg-white group-hover:text-blue-500 group-focus:bg-white group-focus:text-blue-500 group-focus:outline-none transition duration-250 z-10"
       >
         {children}
       </button>
