@@ -33,7 +33,7 @@ const Gallery: React.FC<{ images: Gallery }> = ({ images }) => {
     <section className="py-10 px-1 bg-blue-50">
       <Container>
         <h2 className="text-2xl text-center font-bold mb-4">
-          Мандрівки, що запам'ятаються!
+          Мандрівки, що запам&apos;ятаються!
         </h2>
         <div
           id="gallery"

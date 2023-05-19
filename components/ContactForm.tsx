@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
     >
       <div className="mb-5 relative">
         <label className="text-white block mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
-          Ім'я
+          Ім&apos;я
         </label>
         <input
           type="text"

@@ -1,10 +1,13 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { Montserrat } from 'next/font/google';
 import 'tailwindcss/tailwind.css';
+
+const montserrat = Montserrat({ subsets: ['cyrillic'] });
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <>
+    <div className={montserrat.className}>
       <Head>
         <title>NextTravel Company - Experience World Adventures with Us</title>
         <meta
@@ -12,13 +15,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           content="NextTravel Company offers unforgettable journeys to the best tourist destinations. Join us to experience world adventures!"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <Component {...pageProps} />
-    </>
+    </div>
   );
 };
 
