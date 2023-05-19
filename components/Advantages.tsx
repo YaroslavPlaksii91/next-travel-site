@@ -40,6 +40,7 @@ const Advantages: React.FC = () => {
               src="/images/advantages.jpg"
               alt="Map of the world"
               fill
+              sizes="(max-width: 767px) 100vw, 50vw"
               className="h-full object-cover"
             />
           </div>

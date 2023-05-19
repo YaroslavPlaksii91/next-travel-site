@@ -13,6 +13,7 @@ const AboutUs: React.FC = () => {
               src="/images/about.jpg"
               alt="Passports"
               fill
+              sizes="(max-width: 767px) 100vw, 50vw"
               className="h-full object-cover"
             />
           </div>
