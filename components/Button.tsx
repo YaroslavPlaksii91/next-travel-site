@@ -7,8 +7,14 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({ children }) => {
   return (
-    <Link href="/contacts" className="block text-center">
-      <button className="relative bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none transition duration-250 z-10">
+    <Link
+      href="/contacts"
+      className="block text-center group focus:outline-none"
+    >
+      <button
+        tabIndex={-1}
+        className="relative bg-blue-500 font-medium text-white py-2 px-4 rounded group-hover:bg-white group-hover:text-blue-500 group-focus:bg-white group-focus:text-blue-500 transition duration-250 z-10"
+      >
         {children}
       </button>
     </Link>
