@@ -2,6 +2,9 @@ import { FC, KeyboardEvent } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
+import InputField from '../InputField';
+import Checkbox from '../Checkbox';
+
 import { FormData } from './types';
 
 const ContactForm: FC = () => {
@@ -31,98 +34,59 @@ const ContactForm: FC = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="w-full md:w-2/3 xl:w-1/3 z-10"
     >
-      <div className="mb-5 relative">
-        <label className="text-white block mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
-          Ім&apos;я
-        </label>
-        <input
-          type="text"
-          className={`${
-            errors.name
-              ? 'focus:border-red-300 focus:ring-red-500 border-red-500 text-red-500'
-              : 'focus:border-sky-500  focus:ring-sky-500'
-          } block w-full px-3 py-2 border border-slate-500 rounded-md text-sm shadow-sm focus:outline-none focus:ring-1`}
-          {...register('name', {
-            required: "Це поле є обов'язковим",
-            minLength: {
-              value: 3,
-              message: "Ім'я повинно містити принаймні 3 символи",
-            },
-          })}
-        />
-        {errors.name && (
-          <span className="text-red-500 text-sm absolute">
-            {errors.name.message}
-          </span>
-        )}
-      </div>
-      <div className="mb-5 relative">
-        <label className="text-white block mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
-          Телефон
-        </label>
-        <input
-          type="text"
-          className={`${
-            errors.phone
-              ? 'focus:border-red-500 focus:ring-red-500 border-red-500 text-red-500'
-              : 'focus:border-sky-500  focus:ring-sky-500'
-          } block w-full px-3 py-2 border border-slate-500 rounded-md text-sm shadow-sm focus:outline-none focus:ring-1`}
-          {...register('phone', {
-            required: "Це поле є обов'язковим",
-            pattern: {
-              value: /^\+?[0-9]{10,12}$/,
-              message: 'Номер телефону може містити лише 10-12 цифр!',
-            },
-          })}
-        />
-        {errors.phone && (
-          <span className="text-red-500 text-sm absolute">
-            {errors.phone.message}
-          </span>
-        )}
-      </div>
-      <div className="mb-5 relative">
-        <label className="text-white block mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
-          Електронна пошта
-        </label>
-        <input
-          type="email"
-          className={`${
-            errors.email
-              ? 'focus:border-red-500 focus:ring-red-500 border-red-500 text-red-500'
-              : 'focus:border-sky-500  focus:ring-sky-500'
-          } block w-full px-3 py-2 border border-slate-500 rounded-md text-sm shadow-sm focus:outline-none focus:ring-1`}
-          {...register('email', {
-            required: "Це поле є обов'язковим",
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: 'Введіть дійсну електронну пошту',
-            },
-          })}
-        />
-        {errors.email && (
-          <span className="text-red-500 text-sm absolute">
-            {errors.email.message}
-          </span>
-        )}
-      </div>
-      <div className="mb-4">
-        <label className="flex items-center text-white">
-          <input
-            type="checkbox"
-            className={`mr-2 cursor-pointer focus:outline-none peer`}
-            {...register('checkbox', { required: "Це поле є обов'язковим" })}
-            onKeyDown={onKeyDown}
-          />
-          {errors.checkbox ? (
-            <p className="text-red-500">{errors.checkbox.message}</p>
-          ) : (
-            <p className={`peer-focus:text-blue-500`}>
-              Погоджуюсь на обробку персональних даних
-            </p>
-          )}
-        </label>
-      </div>
+      <InputField
+        label="Ім'я"
+        type="text"
+        name="name"
+        register={register}
+        errors={errors}
+        options={{
+          required: "Це поле є обов'язковим",
+          minLength: {
+            value: 3,
+            message: "Ім'я повинно містити принаймні 3 символи",
+          },
+        }}
+      />
+
+      <InputField
+        label="Телефон"
+        type="text"
+        name="phone"
+        register={register}
+        errors={errors}
+        options={{
+          required: "Це поле є обов'язковим",
+          pattern: {
+            value: /^\+?[0-9]{10,12}$/,
+            message: 'Номер телефону може містити лише 10-12 цифр!',
+          },
+        }}
+      />
+
+      <InputField
+        label="Електронна пошта"
+        type="email"
+        name="email"
+        register={register}
+        errors={errors}
+        options={{
+          required: "Це поле є обов'язковим",
+          pattern: {
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            message: 'Введіть дійсну електронну пошту',
+          },
+        }}
+      />
+
+      <Checkbox
+        label="Погоджуюсь на обробку персональних даних"
+        register={register}
+        errors={errors}
+        options={{ required: "Це поле є обов'язковим" }}
+        onKeyDown={onKeyDown}
+      />
+
       <button
         type="submit"
         className="block mx-auto bg-blue-500 text-white font-medium hover:bg-white focus:bg-white hover:text-blue-500 focus:text-blue-500 focus:outline-none transition-colors duration-300 px-4 py-2 rounded hover{...errors.checkbox ? 'bg-blue-600' : 'bg-blue-500'}"

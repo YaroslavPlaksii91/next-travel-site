@@ -5,7 +5,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 import Logo from '../Logo';
 
-import { about, gallery, advantages } from '@/services/paths.json';
+import paths from '@/services/paths.json';
 
 const Navigation: FC = () => {
   const router = useRouter();
@@ -19,8 +19,8 @@ const Navigation: FC = () => {
           {isSmoothScrollEnabled ? (
             <ScrollLink
               tabIndex={1}
-              href={about}
-              to={about}
+              href={paths.about}
+              to={paths.about}
               smooth={true}
               spy={true}
               duration={500}
@@ -32,7 +32,7 @@ const Navigation: FC = () => {
           ) : (
             <Link
               tabIndex={1}
-              href={`/#${about}`}
+              href={`/#${paths.about}`}
               className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
             >
               Про нас
@@ -43,8 +43,8 @@ const Navigation: FC = () => {
           {isSmoothScrollEnabled ? (
             <ScrollLink
               tabIndex={1}
-              href={gallery}
-              to={gallery}
+              href={paths.gallery}
+              to={paths.gallery}
               smooth={true}
               spy={true}
               duration={500}
@@ -56,7 +56,7 @@ const Navigation: FC = () => {
           ) : (
             <Link
               tabIndex={1}
-              href={`/#${gallery}`}
+              href={`/#${paths.gallery}`}
               className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
             >
               Галерея
@@ -67,8 +67,8 @@ const Navigation: FC = () => {
           {isSmoothScrollEnabled ? (
             <ScrollLink
               tabIndex={1}
-              href={advantages}
-              to={advantages}
+              href={paths.advantages}
+              to={paths.advantages}
               smooth={true}
               spy={true}
               duration={500}
@@ -80,7 +80,7 @@ const Navigation: FC = () => {
           ) : (
             <Link
               tabIndex={1}
-              href={`/#${advantages}`}
+              href={`/#${paths.advantages}`}
               className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
             >
               Наші переваги
