@@ -7,6 +7,8 @@ import Logo from '../Logo';
 
 import paths from '@/services/paths.json';
 
+import s from './Navigation.module.css';
+
 const Navigation: FC = () => {
   const router = useRouter();
   const isSmoothScrollEnabled = router.pathname === '/';
@@ -25,16 +27,12 @@ const Navigation: FC = () => {
               spy={true}
               duration={500}
               offset={-50}
-              className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
+              className={s.link}
             >
               Про нас
             </ScrollLink>
           ) : (
-            <Link
-              tabIndex={1}
-              href={`/#${paths.about}`}
-              className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
-            >
+            <Link tabIndex={1} href={`/#${paths.about}`} className={s.link}>
               Про нас
             </Link>
           )}
@@ -49,16 +47,12 @@ const Navigation: FC = () => {
               spy={true}
               duration={500}
               offset={-150}
-              className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
+              className={s.link}
             >
               Галерея
             </ScrollLink>
           ) : (
-            <Link
-              tabIndex={1}
-              href={`/#${paths.gallery}`}
-              className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
-            >
+            <Link tabIndex={1} href={`/#${paths.gallery}`} className={s.link}>
               Галерея
             </Link>
           )}
@@ -73,7 +67,7 @@ const Navigation: FC = () => {
               spy={true}
               duration={500}
               offset={-50}
-              className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
+              className={s.link}
             >
               Наші переваги
             </ScrollLink>
@@ -81,7 +75,7 @@ const Navigation: FC = () => {
             <Link
               tabIndex={1}
               href={`/#${paths.advantages}`}
-              className="hover:text-blue-500 hover:outline-none focus:text-blue-500 focus:outline-none transition-colors duration-250 cursor-pointer"
+              className={s.link}
             >
               Наші переваги
             </Link>

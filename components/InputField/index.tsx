@@ -12,10 +12,14 @@ const InputField: FC<InputFieldProps> = ({
 }) => {
   return (
     <div className="mb-5 relative">
-      <label className="text-white block mb-1 after:content-['*'] after:ml-0.5 after:text-red-500">
+      <label
+        htmlFor={name}
+        className="text-white block mb-1 after:content-['*'] after:ml-0.5 after:text-red-500"
+      >
         {label}
       </label>
       <input
+        id={name}
         type={type}
         className={`${
           errors[name]
