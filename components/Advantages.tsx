@@ -1,9 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
+
 import Container from './Container';
 import Button from './Button';
 
-const Advantages: React.FC = () => {
+const Advantages: FC = () => {
   return (
     <section id="advantages" className="bg-red-50">
       <Container>

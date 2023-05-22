@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import { FC, useEffect } from 'react';
+import Image from 'next/image';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
-import Image from 'next/image';
+
 import Container from './Container';
 
 type GalleryItem = {
@@ -11,7 +12,7 @@ type GalleryItem = {
 
 type Gallery = GalleryItem[];
 
-const Gallery: React.FC<{ images: Gallery }> = ({ images }) => {
+const Gallery: FC<{ images: Gallery }> = ({ images }) => {
   useEffect(() => {
     const galleryElement = document.getElementById('gallery');
 

@@ -1,9 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { Toaster } from 'react-hot-toast';
+
 import ContactForm from '@/components/ContactForm';
 
-const ContactPage: React.FC = () => {
+const ContactPage: FC = () => {
   return (
     <>
       <main>

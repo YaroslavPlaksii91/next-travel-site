@@ -1,10 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
+
 import Logo from './Logo';
 
-const Nav: React.FC = () => {
+const Nav: FC = () => {
   const router = useRouter();
   const isSmoothScrollEnabled = router.pathname === '/';
 

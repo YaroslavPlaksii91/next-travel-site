@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react';
+import { ReactNode, FC } from 'react';
 import Link from 'next/link';
 
 type ButtonProps = {
   children: ReactNode;
 };
 
-const Button: React.FC<ButtonProps> = ({ children }) => {
+const Button: FC<ButtonProps> = ({ children }) => {
   return (
     <Link
       href="/contacts"

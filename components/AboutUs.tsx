@@ -1,9 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
+
 import Container from './Container';
 import Button from './Button';
 
-const AboutUs: React.FC = () => {
+const AboutUs: FC = () => {
   return (
     <section id="about" className="bg-red-50">
       <Container>

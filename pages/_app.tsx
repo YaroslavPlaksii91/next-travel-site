@@ -1,8 +1,10 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Montserrat } from 'next/font/google';
-import 'tailwindcss/tailwind.css';
+
 import Layout from '@/components/Layout';
+
+import 'tailwindcss/tailwind.css';
 
 const montserrat = Montserrat({ subsets: ['cyrillic'] });
 

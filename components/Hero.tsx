@@ -1,9 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
+
 import Container from './Container';
 import Button from './Button';
 
-const Hero: React.FC = () => {
+const Hero: FC = () => {
   return (
     <section className="relative min-h-screen px-6 py-32 md:py-24 flex justify-center items-center bg-gray-300 md:px-28">
       <Image

@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-const ErrorPage: React.FC = () => {
+const ErrorPage: FC = () => {
   const router = useRouter();
 
   useEffect(() => {

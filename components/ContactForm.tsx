@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
@@ -9,7 +9,7 @@ type FormData = {
   checkbox: boolean;
 };
 
-const ContactForm: React.FC = () => {
+const ContactForm: FC = () => {
   const {
     register,
     handleSubmit,

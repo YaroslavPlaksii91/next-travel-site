@@ -1,7 +1,8 @@
-import React from 'react';
+import { FC } from 'react';
+
 import Container from './Container';
 
-const Footer: React.FC = () => {
+const Footer: FC = () => {
   return (
     <footer className="bg-gray-900 text-white text-center p-8">
       <Container>
