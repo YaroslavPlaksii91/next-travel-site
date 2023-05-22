@@ -1,10 +1,9 @@
 import { FC, useEffect } from 'react';
-import Image from 'next/image';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 
-import Container from './Container';
-import GalleryItem from './GalleryItem';
+import Container from '../components/Container';
+import GalleryItem from '../components/GalleryItem';
 
 type Gallery = GalleryItem[];
 
@@ -17,7 +16,11 @@ const Gallery: FC<{ images: Gallery }> = ({ images }) => {
         gallery: '#gallery',
         children: 'a',
         pswpModule: () => import('photoswipe'),
+        showHideAnimationType: 'zoom',
+        showAnimationDuration: 250,
+        hideAnimationDuration: 250,
       });
+
       lightbox.init();
 
       return () => {

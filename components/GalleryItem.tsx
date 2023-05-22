@@ -17,8 +17,8 @@ const GalleryItem: FC<GalleryItemProps> = ({ image }) => {
   return (
     <a
       href={href}
-      data-pswp-width={800}
-      data-pswp-height={500}
+      data-pswp-width={5400}
+      data-pswp-height={3605}
       className="relative block w-full h-full hover:opacity-80 focus:opacity-80 transition-opacity duration-250"
     >
       <Image

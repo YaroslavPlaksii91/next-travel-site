@@ -15,6 +15,7 @@
     "@types/react-dom": "18.2.4",
     "@types/react-scroll": "^1.8.7",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@vovayatsyuk/photoswipe-object-position": "^1.0.0",
     "autoprefixer": "10.4.14",
     "eslint-config-next": "13.4.2",
     "next": "13.4.2",

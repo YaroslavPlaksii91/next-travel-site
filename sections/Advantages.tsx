@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import Container from './Container';
-import LinkToContacts from './LinkToContacts';
+import Container from '../components/Container';
+import LinkToContacts from '../components/LinkToContacts';
 
 const Advantages: FC = () => {
   return (
