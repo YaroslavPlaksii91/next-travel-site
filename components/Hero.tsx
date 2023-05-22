@@ -5,7 +5,7 @@ import Button from './Button';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen px-4 py-32 md:py-24 flex justify-center items-center bg-gray-300 md:px-28">
+    <section className="relative min-h-screen px-6 py-32 md:py-24 flex justify-center items-center bg-gray-300 md:px-28">
       <Image
         src="/images/hero-image.jpg"
         alt="View of the sea"
