@@ -1,38 +1,47 @@
 [
-    {
-        "id": 1,
-        "href": "/images/gallery-1.jpg"
-    },
-    {
-        "id": 2,
-        "href": "/images/gallery-2.jpg"
-    },
-    {
-        "id": 3,
-        "href": "/images/gallery-3.jpg"
-    },
-    {
-        "id": 4,
-        "href": "/images/gallery-4.jpg"
-    },
-    {
-        "id": 5,
-        "href": "/images/gallery-5.jpg"
-    },
-    {
-        "id": 6,
-        "href": "/images/gallery-6.jpg"
-    },
-    {
-        "id": 7,
-        "href": "/images/gallery-9.jpg"
-    },
-    {
-        "id": 8,
-        "href": "/images/gallery-8.jpg"
-    },
-    {
-        "id": 9,
-        "href": "/images/gallery-10.jpg"
-    }
+  {
+    "id": 1,
+    "href": "/images/gallery-1.jpg",
+    "alt": "Palm tree on the ocean shore"
+  },
+  {
+    "id": 2,
+    "href": "/images/gallery-2.jpg",
+    "alt": "Aztec mountain"
+  },
+  {
+    "id": 3,
+    "href": "/images/gallery-3.jpg",
+    "alt": "Hot air balloons are flying"
+  },
+  {
+    "id": 4,
+    "href": "/images/gallery-4.jpg",
+    "alt": "Mountains with a rainbow above them"
+  },
+  {
+    "id": 5,
+    "href": "/images/gallery-5.jpg",
+    "alt": "A river in the mountains"
+  },
+  {
+    "id": 6,
+    "href": "/images/gallery-6.jpg",
+    "alt": "Palm trees on the ocean shore"
+  },
+  {
+    "id": 7,
+    "href": "/images/gallery-9.jpg",
+    "alt": "Ponds near the mountains"
+  },
+  {
+    "id": 8,
+    "href": "/images/gallery-8.jpg",
+    "alt": "Waterfall"
+  },
+  {
+    "id": 9,
+    "href": "/images/gallery-10.jpg",
+    "alt": "Mountain plateau"
+  }
 ]

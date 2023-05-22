@@ -8,6 +8,7 @@ import Container from './Container';
 type GalleryItem = {
   id: number;
   href: string;
+  alt: string;
 };
 
 type Gallery = GalleryItem[];
@@ -40,7 +41,7 @@ const Gallery: FC<{ images: Gallery }> = ({ images }) => {
           id="gallery"
           className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
         >
-          {images.map(({ href, id }, index) => (
+          {images.map(({ id, href, alt }, index) => (
             <div
               key={id}
               className={`h-80 overflow-hidden rounded ${
@@ -57,7 +58,7 @@ const Gallery: FC<{ images: Gallery }> = ({ images }) => {
               >
                 <Image
                   src={href}
-                  alt="Nature"
+                  alt={alt}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
                 />
