@@ -2,10 +2,10 @@ import { FC, useEffect } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 
-import Container from '../components/Container';
-import GalleryItem from '../components/GalleryItem';
+import Container from '@/components/Container';
+import GalleryItem from '@/components/GalleryItem';
 
-import { GalleryProps } from '../components/GalleryItem/types';
+import { GalleryProps } from '@/components/GalleryItem/types';
 
 const Gallery: FC<GalleryProps> = ({ images }) => {
   useEffect(() => {
