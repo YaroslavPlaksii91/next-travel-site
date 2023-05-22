@@ -5,7 +5,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 import Logo from './Logo';
 
-const Nav: FC = () => {
+const Navigation: FC = () => {
   const router = useRouter();
   const isSmoothScrollEnabled = router.pathname === '/';
 
@@ -90,4 +90,4 @@ const Nav: FC = () => {
   );
 };
 
-export default Nav;
+export default Navigation;
