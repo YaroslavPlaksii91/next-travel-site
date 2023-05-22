@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const ErrorPage: React.FC = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      router.push('/');
+    }, 3000);
+  }, [router]);
+
   return (
     <div className="relative h-screen flex flex-col justify-center bg-gray-300">
       <Image
