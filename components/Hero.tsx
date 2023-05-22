@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import Container from '../components/Container';
-import LinkToContacts from '../components/LinkToContacts';
+import Container from '@/components/Container';
+import LinkToContacts from '@/components/LinkToContacts';
 
 const Hero: FC = () => {
   return (

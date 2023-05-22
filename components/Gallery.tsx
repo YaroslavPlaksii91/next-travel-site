@@ -13,7 +13,7 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
 
     if (galleryElement) {
       const lightbox = new PhotoSwipeLightbox({
-        gallery: '#gallery',
+        gallery: '#photoGallery',
         children: 'a',
         pswpModule: () => import('photoswipe'),
         showHideAnimationType: 'zoom',
@@ -36,7 +36,7 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
           Мандрівки, що запам&apos;ятаються!
         </h2>
         <ul
-          id="gallery"
+          id="photoGallery"
           className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
         >
           {images.map((image, index) => (
