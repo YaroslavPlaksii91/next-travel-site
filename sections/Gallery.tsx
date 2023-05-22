@@ -30,7 +30,7 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
   }, []);
 
   return (
-    <section className="py-10 px-3 bg-blue-50">
+    <section id="gallery" className="py-10 px-3 bg-blue-50">
       <Container>
         <h2 className="text-2xl text-center font-bold mb-4">
           Мандрівки, що запам&apos;ятаються!
