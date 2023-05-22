@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 import Container from './Container';
-import Button from './Button';
+import LinkToContacts from './LinkToContacts';
 
 const AboutUs: FC = () => {
   return (
@@ -25,7 +25,7 @@ const AboutUs: FC = () => {
               туристичних напрямків. Долучайтеся до нас, щоб пережити світові
               пригоди!
             </p>
-            <Button>Залишити заявку</Button>
+            <LinkToContacts>Залишити заявку</LinkToContacts>
           </div>
         </div>
       </Container>

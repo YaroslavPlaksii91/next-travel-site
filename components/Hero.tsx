@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 import Container from './Container';
-import Button from './Button';
+import LinkToContacts from './LinkToContacts';
 
 const Hero: FC = () => {
   return (
@@ -11,6 +11,7 @@ const Hero: FC = () => {
         src="/images/hero-image.jpg"
         alt="View of the sea"
         fill
+        priority
         className="h-full object-cover object-center z-0"
       />
       <Container>
@@ -24,7 +25,7 @@ const Hero: FC = () => {
           які дозволять вам побачити світ у всій його красі та відкрити нові
           горизонти. Приєднуйтесь до нас і створюйте незабутні спогади!
         </p>
-        <Button>Залишити заявку</Button>
+        <LinkToContacts>Залишити заявку</LinkToContacts>
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-20"></div>
       </Container>
     </section>
