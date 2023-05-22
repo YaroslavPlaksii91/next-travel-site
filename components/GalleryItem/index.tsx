@@ -1,15 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-type GalleryItem = {
-  id: number;
-  href: string;
-  alt: string;
-};
-
-type GalleryItemProps = {
-  image: GalleryItem;
-};
+import { GalleryItemProps } from './types';
 
 const GalleryItem: FC<GalleryItemProps> = ({ image }) => {
   const { href, alt } = image;

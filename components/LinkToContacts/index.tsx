@@ -1,9 +1,7 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import Link from 'next/link';
 
-type LinkProps = {
-  children: ReactNode;
-};
+import { LinkProps } from './types';
 
 const LinkToContacts: FC<LinkProps> = ({ children }) => {
   return (

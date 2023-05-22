@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import Container from './Container';
-import Navigation from './Navigation';
+import Container from '../Container';
+import Navigation from '../Navigation';
 
 const Header: FC = () => {
   return (

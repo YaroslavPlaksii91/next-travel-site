@@ -1,8 +1,6 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 
-interface MainProps {
-  children: ReactNode;
-}
+import { MainProps } from './types';
 
 const Main: FC<MainProps> = ({ children }) => {
   return <main>{children}</main>;

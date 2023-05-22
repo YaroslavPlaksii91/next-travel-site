@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 
-import Logo from './Logo';
+import Logo from '../Logo';
 
 const Navigation: FC = () => {
   const router = useRouter();

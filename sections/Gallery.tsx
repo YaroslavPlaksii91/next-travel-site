@@ -5,9 +5,9 @@ import 'photoswipe/style.css';
 import Container from '../components/Container';
 import GalleryItem from '../components/GalleryItem';
 
-type Gallery = GalleryItem[];
+import { GalleryProps } from '../components/GalleryItem/types';
 
-const Gallery: FC<{ images: Gallery }> = ({ images }) => {
+const Gallery: FC<GalleryProps> = ({ images }) => {
   useEffect(() => {
     const galleryElement = document.getElementById('gallery');
 

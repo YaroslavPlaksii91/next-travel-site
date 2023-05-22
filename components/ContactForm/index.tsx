@@ -1,13 +1,8 @@
-import { FC } from 'react';
+import { FC, KeyboardEvent } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
-type FormData = {
-  name: string;
-  phone: string;
-  email: string;
-  checkbox: boolean;
-};
+import { FormData } from './types';
 
 const ContactForm: FC = () => {
   const {
@@ -23,7 +18,7 @@ const ContactForm: FC = () => {
     reset();
   };
 
-  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
       const target = e.target as HTMLInputElement;
@@ -75,8 +70,8 @@ const ContactForm: FC = () => {
           {...register('phone', {
             required: "Це поле є обов'язковим",
             pattern: {
-              value: /^\+?[0-9]{10,14}$/,
-              message: 'Некоректний формат телефону',
+              value: /^\+?[0-9]{10,12}$/,
+              message: 'Номер телефону може містити лише 10-12 цифр!',
             },
           })}
         />
