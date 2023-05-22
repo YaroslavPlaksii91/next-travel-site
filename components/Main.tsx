@@ -1,27 +1,11 @@
-import React from 'react';
-import Hero from './Hero';
-import AboutUs from './AboutUs';
-import Gallery from './Gallery';
-import Advantages from './Advantages';
-import images from '../services/images.json';
+import React, { ReactNode } from 'react';
 
-const Main: React.FC = () => {
-  return (
-    <main>
-      <Hero />
-      <AboutUs />
-      <Gallery images={images} />
-      <Advantages />
-    </main>
-  );
+interface MainProps {
+  children: ReactNode;
+}
+
+const Main: React.FC<MainProps> = ({ children }) => {
+  return <main>{children}</main>;
 };
 
 export default Main;
-
-export async function getStaticProps() {
-  return {
-    props: {
-      images,
-    },
-  };
-}
