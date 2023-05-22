@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Montserrat } from 'next/font/google';
 import 'tailwindcss/tailwind.css';
+import Layout from '@/components/Layout';
 
 const montserrat = Montserrat({ subsets: ['cyrillic'] });
 
@@ -16,7 +17,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </div>
   );
 };

@@ -9,5 +9,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["lightbox", "photoswipe"] // set as "true" to run 'prettier' last not first
+  "cSpell.words": ["lightbox", "photoswipe"],
+  "editor.fontSize": 14 // set as "true" to run 'prettier' last not first
 }
