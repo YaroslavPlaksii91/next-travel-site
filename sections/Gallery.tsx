@@ -1,6 +1,6 @@
-import { FC, useEffect } from 'react';
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
+import { FC, useState, useEffect } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 import Container from '@/components/Container';
 import GalleryItem from '@/components/GalleryItem';
@@ -8,25 +8,19 @@ import GalleryItem from '@/components/GalleryItem';
 import { GalleryProps } from '@/components/GalleryItem/types';
 
 const Gallery: FC<GalleryProps> = ({ images }) => {
+  const [isCenterMode, setIsCenterMode] = useState(false);
+
   useEffect(() => {
-    const galleryElement = document.getElementById('gallery');
+    const handleResize = () => {
+      setIsCenterMode(window.innerWidth >= 768);
+    };
 
-    if (galleryElement) {
-      const lightbox = new PhotoSwipeLightbox({
-        gallery: '#photoGallery',
-        children: 'a',
-        pswpModule: () => import('photoswipe'),
-        showHideAnimationType: 'zoom',
-        showAnimationDuration: 250,
-        hideAnimationDuration: 250,
-      });
+    handleResize();
+    window.addEventListener('resize', handleResize);
 
-      lightbox.init();
-
-      return () => {
-        lightbox.destroy();
-      };
-    }
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -35,21 +29,26 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
         <h2 className="text-2xl text-center font-bold mb-4">
           Мандрівки, що запам&apos;ятаються!
         </h2>
-        <ul
-          id="photoGallery"
-          className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+        <Carousel
+          ariaLabel="gallery"
+          autoPlay
+          infiniteLoop
+          emulateTouch
+          centerMode={isCenterMode}
+          centerSlidePercentage={50}
+          transitionTime={1000}
+          showStatus={false}
+          showThumbs={false}
         >
-          {images.map((image, index) => (
-            <li
+          {images.map((image) => (
+            <div
               key={image.id}
-              className={`h-80 overflow-hidden rounded ${
-                index === images.length - 1 ? 'hidden xl:block' : ''
-              }`}
+              className={'h-[400px] xl:h-[480px] overflow-hidden rounded'}
             >
               <GalleryItem image={image} />
-            </li>
+            </div>
           ))}
-        </ul>
+        </Carousel>
       </Container>
     </section>
   );

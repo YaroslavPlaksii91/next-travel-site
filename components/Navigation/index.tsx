@@ -43,7 +43,7 @@ const Navigation: FC = () => {
               smooth={true}
               spy={true}
               duration={500}
-              offset={-150}
+              offset={-50}
               className={s.link}
             >
               Галерея
