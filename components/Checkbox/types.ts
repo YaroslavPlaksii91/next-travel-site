@@ -1,10 +1,10 @@
 import { KeyboardEvent } from "react";
+import { UseFormRegisterReturn , FieldErrors } from "react-hook-form";
 
 export type CheckboxProps = {
     label: string;
-    register: any;
-    errors: any;
-    options: any;
+    register: UseFormRegisterReturn;
+    errors: FieldErrors;
     onKeyDown: (e: KeyboardEvent<HTMLInputElement>) => void;
 }
 

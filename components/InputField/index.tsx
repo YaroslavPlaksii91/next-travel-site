@@ -8,7 +8,6 @@ const InputField: FC<InputFieldProps> = ({
   name,
   register,
   errors,
-  options,
 }) => {
   return (
     <div className="mb-5 relative">
@@ -26,11 +25,11 @@ const InputField: FC<InputFieldProps> = ({
             ? 'focus:border-red-500 focus:ring-red-500 border-red-500 text-red-500'
             : 'focus:border-sky-500  focus:ring-sky-500'
         } block w-full px-3 py-2 border border-slate-500 rounded-md text-sm shadow-sm focus:outline-none focus:ring-1`}
-        {...register(name, options)}
+        {...register}
       />
       {errors[name] && (
         <span className="text-red-500 text-sm absolute">
-          {errors[name].message}
+          {errors[name]?.message as string}
         </span>
       )}
     </div>

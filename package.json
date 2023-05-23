@@ -15,7 +15,6 @@
     "@types/react-dom": "18.2.4",
     "@types/react-scroll": "^1.8.7",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
-    "@vovayatsyuk/photoswipe-object-position": "^1.0.0",
     "autoprefixer": "10.4.14",
     "eslint-config-next": "13.4.2",
     "next": "13.4.2",
@@ -26,8 +25,6 @@
     "react-hook-form": "^7.43.9",
     "react-hot-toast": "^2.4.1",
     "react-scroll": "^1.8.9",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
   },

@@ -6,7 +6,6 @@ const Checkbox: FC<CheckboxProps> = ({
   label,
   register,
   errors,
-  options,
   onKeyDown,
 }) => {
   return (
@@ -15,11 +14,11 @@ const Checkbox: FC<CheckboxProps> = ({
         <input
           type="checkbox"
           className={`mr-2 cursor-pointer focus:outline-none peer`}
-          {...register('checkbox', options)}
+          {...register}
           onKeyDown={onKeyDown}
         />
         {errors.checkbox ? (
-          <p className="text-red-500">{errors.checkbox.message}</p>
+          <p className="text-red-500">{errors.checkbox.message as string}</p>
         ) : (
           <p className={`peer-focus:text-blue-500`}>{label}</p>
         )}

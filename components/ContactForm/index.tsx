@@ -38,52 +38,48 @@ const ContactForm: FC = () => {
         label="Ім'я"
         type="text"
         name="name"
-        register={register}
-        errors={errors}
-        options={{
+        register={register('name', {
           required: "Це поле є обов'язковим",
           minLength: {
             value: 3,
             message: "Ім'я повинно містити принаймні 3 символи",
           },
-        }}
+        })}
+        errors={errors}
       />
 
       <InputField
         label="Телефон"
         type="text"
         name="phone"
-        register={register}
-        errors={errors}
-        options={{
+        register={register('phone', {
           required: "Це поле є обов'язковим",
           pattern: {
             value: /^\+?[0-9]{10,12}$/,
             message: 'Номер телефону може містити лише 10-12 цифр!',
           },
-        }}
+        })}
+        errors={errors}
       />
 
       <InputField
         label="Електронна пошта"
         type="email"
         name="email"
-        register={register}
-        errors={errors}
-        options={{
+        register={register('email', {
           required: "Це поле є обов'язковим",
           pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
             message: 'Введіть дійсну електронну пошту',
           },
-        }}
+        })}
+        errors={errors}
       />
 
       <Checkbox
         label="Погоджуюсь на обробку персональних даних"
-        register={register}
+        register={register('checkbox', { required: "Це поле є обов'язковим" })}
         errors={errors}
-        options={{ required: "Це поле є обов'язковим" }}
         onKeyDown={onKeyDown}
       />
 
