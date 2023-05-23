@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Toaster } from 'react-hot-toast';
 
 import Main from '@/components/Main';
-import ContactUs from '@/components/ContactUs';
+import ContactUs from '@/sections/ContactUs';
 
 const ContactPage: FC = () => {
   return (

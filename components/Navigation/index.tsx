@@ -3,8 +3,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 
-import Logo from '../Logo';
-
 import paths from '@/services/paths.json';
 
 import s from './Navigation.module.css';
@@ -14,8 +12,7 @@ const Navigation: FC = () => {
   const isSmoothScrollEnabled = router.pathname === '/';
 
   return (
-    <nav className="flex flex-col justify-between items-center md:flex-row ">
-      <Logo />
+    <nav>
       <ul className="flex text-sm md:text-base space-x-3 md:space-x-8">
         <li>
           {isSmoothScrollEnabled ? (
