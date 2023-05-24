@@ -43,7 +43,9 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
           {images.map((image) => (
             <div
               key={image.id}
-              className={'h-[400px] xl:h-[480px] overflow-hidden rounded'}
+              className={
+                'h-[400px] xl:h-[480px] overflow-hidden rounded relative'
+              }
             >
               <GalleryItem image={image} />
             </div>

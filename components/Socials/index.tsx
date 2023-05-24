@@ -17,6 +17,7 @@ const Socials: FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={s.link}
+          aria-label="Visit our instagram page"
         >
           <Instagram />
         </Link>
@@ -27,6 +28,7 @@ const Socials: FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={s.link}
+          aria-label="Visit our youtube page"
         >
           <Youtube />
         </Link>
@@ -37,6 +39,7 @@ const Socials: FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={s.link}
+          aria-label="Visit our telegram page"
         >
           <Telegram />
         </Link>
@@ -47,6 +50,7 @@ const Socials: FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={s.link}
+          aria-label="Visit our facebook page"
         >
           <Facebook />
         </Link>
