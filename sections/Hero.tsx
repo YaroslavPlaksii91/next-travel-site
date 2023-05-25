@@ -16,7 +16,8 @@ const Hero: FC = () => {
       />
       <Container>
         <h1 className="relative text-center font-bold mb-5 text-white z-10 text-3xl md:text-6xl ">
-          Відкрийте світ подорожей з <span className="text-blue-500">Next</span>
+          Відкрийте світ подорожей з{' '}
+          <span className="text-blue-500">Coral</span>
           <span className="text-yellow-400">Travel</span> Company
         </h1>
         <p className="relative text-base md:text-xl text-center mb-6 text-white z-10">
