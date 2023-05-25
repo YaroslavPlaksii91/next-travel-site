@@ -12,7 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <div className={montserrat.className}>
       <Head>
-        <title>NextTravel Company - Experience World Adventures with Us</title>
+        <title>CoralTravel Company - Experience World Adventures with Us</title>
         <meta
           name="description"
           content="CoralTravel Company offers unforgettable journeys to the best tourist destinations. Join us to experience world adventures!"
