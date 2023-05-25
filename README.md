@@ -1,6 +1,6 @@
-# NextTravel Company - Experience World Adventures with Us
+# CoralTravel Company - Experience World Adventures with Us
 
-Welcome to NextTravel Company! We offer unforgettable journeys to the best tourist destinations, providing you with a wide range of travel experiences and adventures. Whether you're looking for a relaxing beach getaway, an exciting city exploration, or an immersive cultural expedition, we've got you covered.
+Welcome to CoralTravel Company! We offer unforgettable journeys to the best tourist destinations, providing you with a wide range of travel experiences and adventures. Whether you're looking for a relaxing beach getaway, an exciting city exploration, or an immersive cultural expedition, we've got you covered.
 
 ## Technologies Used
 
@@ -52,14 +52,14 @@ Welcome to NextTravel Company! We offer unforgettable journeys to the best touri
 
 ## Deployment
 
-To deploy the NextTravel Company website, follow the deployment instructions provided by the hosting platform of your choice. Some popular options include Vercel, Netlify, and AWS Amplify.
+To deploy the CoralTravel Company website, follow the deployment instructions provided by the hosting platform of your choice. Some popular options include Vercel, Netlify, and AWS Amplify.
 
 ## Contributing
 
-We welcome contributions to enhance the NextTravel Company website. If you find any issues or have ideas for improvements, please open an issue or submit a pull request.
+We welcome contributions to enhance the CoralTravel Company website. If you find any issues or have ideas for improvements, please open an issue or submit a pull request.
 
 ## License
 
 This project is licensed under the MIT License.
 
-We hope you enjoy exploring the world with NextTravel Company! Happy travels!
+We hope you enjoy exploring the world with CoralTravel Company! Happy travels!
